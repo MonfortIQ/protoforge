@@ -13,7 +13,7 @@ function toggleTheme() {
 }
 
 function updateThemeIcon(theme) {
-    const themeToggles = document.querySelectorAll('#themeToggle, #themeToggleDash');
+    const themeToggles = document.querySelectorAll('#themeToggle, #themeToggleDash, #desk_themeToggle, #mob_themeToggle');
     themeToggles.forEach(toggle => {
         if (theme === 'dark') {
             toggle.innerHTML = '<i class="bi bi-moon-fill theme-icon" style="transform: rotate(180deg); transition: 0.4s ease;"></i>';
@@ -37,14 +37,14 @@ function toggleDirection() {
 }
 
 function updateDirectionIcon(direction) {
-    const rtlToggle = document.getElementById('rtlToggle');
-    if (rtlToggle) {
+    const rtlToggles = document.querySelectorAll('#rtlToggle, #rtlToggleDash, #desk_rtlToggle, #mob_rtlToggle');
+    rtlToggles.forEach(toggle => {
         if (direction === 'rtl') {
-            rtlToggle.innerHTML = '<span class="rtl-text fw-bold">LTR</span>';
+            toggle.innerHTML = '<span class="rtl-text fw-bold">LTR</span>';
         } else {
-            rtlToggle.innerHTML = '<span class="ltr-text fw-bold">RTL</span>';
+            toggle.innerHTML = '<span class="ltr-text fw-bold">RTL</span>';
         }
-    }
+    });
 }
 
 function updateCharts(direction) {
@@ -56,29 +56,35 @@ function updateCharts(direction) {
     }
 }
 
-// Initialize on load to ensure buttons match the pre-applied theme/dir from the <head> script
-document.addEventListener('DOMContentLoaded', () => {
+// Global function to bind click handlers to all theme/RTL toggle buttons.
+// Called on DOMContentLoaded for static buttons, and re-called by auth.js
+// after it dynamically injects the desktop/mobile toggle buttons.
+function bindThemeRtlToggles() {
     const theme = document.documentElement.getAttribute("data-theme") || "light";
     const dir = document.documentElement.getAttribute("dir") || "ltr";
-    
+
     updateThemeIcon(theme);
     updateDirectionIcon(dir);
 
     // Bind theme toggles
-    const themeBtns = document.querySelectorAll('#themeToggle, #themeToggleDash');
+    const themeBtns = document.querySelectorAll('#themeToggle, #themeToggleDash, #desk_themeToggle, #mob_themeToggle');
     themeBtns.forEach(btn => {
-        // Remove old listeners by replacing the element if necessary, 
-        // but since we only add it here now, it's fine.
+        // Clone-replace to remove any stale listeners, then attach fresh ones
         const newBtn = btn.cloneNode(true);
         btn.parentNode.replaceChild(newBtn, btn);
         newBtn.addEventListener('click', toggleTheme);
     });
 
     // Bind RTL toggles
-    const rtlBtn = document.getElementById('rtlToggle');
-    if (rtlBtn) {
-        const newRtlBtn = rtlBtn.cloneNode(true);
-        rtlBtn.parentNode.replaceChild(newRtlBtn, rtlBtn);
-        newRtlBtn.addEventListener('click', toggleDirection);
-    }
+    const rtlBtns = document.querySelectorAll('#rtlToggle, #rtlToggleDash, #desk_rtlToggle, #mob_rtlToggle');
+    rtlBtns.forEach(btn => {
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+        newBtn.addEventListener('click', toggleDirection);
+    });
+}
+
+// Initial bind for any static buttons already in the DOM
+document.addEventListener('DOMContentLoaded', () => {
+    bindThemeRtlToggles();
 });

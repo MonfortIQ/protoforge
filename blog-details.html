@@ -46,28 +46,6 @@
 </head>
 <body class="light-mode" data-bs-spy="scroll" data-bs-target="#navbar">
     
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loader-content">
-            <div class="cube-loader">
-                <div class="cube-face front"></div>
-                <div class="cube-face back"></div>
-                <div class="cube-face left"></div>
-                <div class="cube-face right"></div>
-                <div class="cube-face top"></div>
-                <div class="cube-face bottom"></div>
-                <div class="printer-laser"></div>
-            </div>
-            <div class="loader-text mt-4 syne-font fw-bold fs-4">ProtoForge</div>
-            <div class="progress-container mt-2">
-                <div class="progress-bar-loading"></div>
-            </div>
-        </div>
-    </div>
-
-    
-
-    <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-xl fixed-top pf-navbar clay-nav">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="/index.html">
@@ -98,32 +76,29 @@
                 <li class="nav-item">
                     <a class="nav-link " href="/about.html">About</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/services.html">Services</a>
+                </li>
+                
+                
+                
                 <li class="nav-item dropdown pf-dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown">
-                        Services
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
                     </a>
-                    <ul class="dropdown-menu clay-dropdown">
-                        <li><a class="dropdown-item" href="/services.html">Industrial Services</a></li>
-                        <li><a class="dropdown-item" href="/services2.html">Creative Services</a></li>
+                    <ul class="dropdown-menu clay-dropdown border-0 shadow-lg">
+                        <li><a class="dropdown-item" href="/materials.html">Materials</a></li>
+                        <li><a class="dropdown-item" href="/how-it-works.html">How It Works</a></li>
+                        <li><a class="dropdown-item" href="/faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="/404.html">404 Error</a></li>
+                        <li><a class="dropdown-item" href="/coming-soon.html">Coming Soon</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/materials.html">Materials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/how-it-works.html">How It Works</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/pricing.html">Pricing</a>
                 </li>
-                <li class="nav-item dropdown pf-dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
-                        Blog
-                    </a>
-                    <ul class="dropdown-menu clay-dropdown">
-                        <li><a class="dropdown-item" href="/blog.html">Industrial Blog</a></li>
-                        <li><a class="dropdown-item" href="/blog2.html">Creative Blog</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link " href="/blog.html">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/contact.html">Contact</a>
@@ -168,8 +143,8 @@
                 <div class="position-sticky text-center" style="top: 120px;">
                     <p class="small fw-bold text-muted mb-3 text-uppercase tracking-wide">Share</p>
                     <div class="d-flex flex-column gap-3 align-items-center">
-                        <a href="#" class="clay-icon-btn"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="clay-icon-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-linkedin"></i></a>
                         <a href="#" class="clay-icon-btn"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="clay-icon-btn"><i class="bi bi-link-45deg"></i></a>
                     </div>
@@ -285,10 +260,10 @@
                 </a>
                 <p class="text-muted mb-4 pe-lg-4">Making professional 3D manufacturing accessible to everyone. From digital ideas to physical reality.</p>
                 <div class="d-flex gap-3 social-icons">
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-youtube"></i></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-youtube"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-6">
@@ -369,6 +344,102 @@
     <script src="/assets/js/auth.js"></script>
 
     
-    <script src="/assets/js/theme-rtl.js"></script>
+    <script>
+    // Robust Data Dictionary for Blogs
+    const blogData = {
+        '1': {
+            title: 'The Future of Automation in 3D Printing',
+            category: 'Technology',
+            img: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+            date: 'Oct 12, 2023',
+            author: 'Dr. Alan Turing'
+        },
+        '2': {
+            title: 'How Prototyping Saves Millions in R&D',
+            category: 'Engineering',
+            img: 'https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=800&q=80',
+            date: 'Sep 28, 2023',
+            author: 'Sarah Connor'
+        },
+        '3': {
+            title: 'New Titanium Alloy for Aerospace',
+            category: 'Materials',
+            img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80',
+            date: 'Sep 15, 2023',
+            author: 'Tony Stark'
+        },
+        '4': {
+            title: 'Optimizing CAD for Print Speed',
+            category: 'Industrial',
+            img: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=800&q=80',
+            date: 'Aug 30, 2023',
+            author: 'Bruce Wayne'
+        },
+        '5': {
+            title: 'The Rise of Desktop Manufacturing',
+            category: 'Technology',
+            img: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80',
+            date: 'Aug 12, 2023',
+            author: 'Clark Kent'
+        },
+        '6': {
+            title: 'Resin vs Filament: A Cost Analysis',
+            category: 'Materials',
+            img: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=800&q=80',
+            date: 'Jul 22, 2023',
+            author: 'Diana Prince'
+        },
+        '7': {
+            title: 'Bioprinting: The Medical Revolution',
+            category: 'Technology',
+            img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
+            date: 'Jul 05, 2023',
+            author: 'Barry Allen'
+        },
+        '8': {
+            title: 'Automotive Restorations with 3D Scanners',
+            category: 'Engineering',
+            img: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+            date: 'Jun 18, 2023',
+            author: 'Hal Jordan'
+        },
+        '9': {
+            title: 'Sustainable Filaments from Ocean Plastic',
+            category: 'Materials',
+            img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80',
+            date: 'Jun 02, 2023',
+            author: 'Arthur Curry'
+        }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    if (id && blogData[id]) {
+        const data = blogData[id];
+        
+        // Update DOM elements
+        const titleEl = document.querySelector('.hero-industrial h1');
+        const imgEl = document.querySelector('.hero-visual img');
+        const badgeEl = document.querySelector('.hero-industrial .badge');
+        
+        // Update author and date (they are in the lead paragraph or author block usually, let's just find them by text or class)
+        const authorElements = document.querySelectorAll('.text-muted');
+        
+        if (titleEl) titleEl.innerHTML = data.title;
+        if (imgEl) imgEl.src = data.img;
+        if (badgeEl) badgeEl.innerHTML = data.category;
+        
+        // Attempt to replace author and date if found
+        authorElements.forEach(el => {
+            if (el.innerHTML.includes('Oct 12, 2023')) el.innerHTML = el.innerHTML.replace('Oct 12, 2023', data.date);
+            if (el.innerHTML.includes('Dr. Alan Turing')) el.innerHTML = el.innerHTML.replace('Dr. Alan Turing', data.author);
+        });
+        
+        // Update document title
+        document.title = "ProtoForge Studio | " + data.title;
+    }
+</script>
+<script src="/assets/js/theme-rtl.js"></script>
 </body>
 </html>

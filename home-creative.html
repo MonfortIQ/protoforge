@@ -46,28 +46,6 @@
 </head>
 <body class="light-mode" data-bs-spy="scroll" data-bs-target="#navbar">
     
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loader-content">
-            <div class="cube-loader">
-                <div class="cube-face front"></div>
-                <div class="cube-face back"></div>
-                <div class="cube-face left"></div>
-                <div class="cube-face right"></div>
-                <div class="cube-face top"></div>
-                <div class="cube-face bottom"></div>
-                <div class="printer-laser"></div>
-            </div>
-            <div class="loader-text mt-4 syne-font fw-bold fs-4">ProtoForge</div>
-            <div class="progress-container mt-2">
-                <div class="progress-bar-loading"></div>
-            </div>
-        </div>
-    </div>
-
-    
-
-    <!-- Navbar -->
     <nav id="navbar" class="navbar navbar-expand-xl fixed-top pf-navbar clay-nav">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="/index.html">
@@ -98,32 +76,29 @@
                 <li class="nav-item">
                     <a class="nav-link " href="/about.html">About</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/services2.html">Services</a>
+                </li>
+                
+                
+                
                 <li class="nav-item dropdown pf-dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown">
-                        Services
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pages
                     </a>
-                    <ul class="dropdown-menu clay-dropdown">
-                        <li><a class="dropdown-item" href="/services.html">Industrial Services</a></li>
-                        <li><a class="dropdown-item" href="/services2.html">Creative Services</a></li>
+                    <ul class="dropdown-menu clay-dropdown border-0 shadow-lg">
+                        <li><a class="dropdown-item" href="/materials.html">Materials</a></li>
+                        <li><a class="dropdown-item" href="/how-it-works.html">How It Works</a></li>
+                        <li><a class="dropdown-item" href="/faq.html">FAQ</a></li>
+                        <li><a class="dropdown-item" href="/404.html">404 Error</a></li>
+                        <li><a class="dropdown-item" href="/coming-soon.html">Coming Soon</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/materials.html">Materials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/how-it-works.html">How It Works</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/pricing.html">Pricing</a>
                 </li>
-                <li class="nav-item dropdown pf-dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown">
-                        Blog
-                    </a>
-                    <ul class="dropdown-menu clay-dropdown">
-                        <li><a class="dropdown-item" href="/blog.html">Industrial Blog</a></li>
-                        <li><a class="dropdown-item" href="/blog2.html">Creative Blog</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link " href="/blog2.html">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/contact.html">Contact</a>
@@ -147,22 +122,22 @@
                 <span class="badge bg-creative bg-opacity-10 text-creative-pf px-3 py-2 rounded-pill mb-4 border border-creative border-opacity-25" style="border-color: var(--pf-purple) !important;">ProtoForge Creative</span>
                 <h1 class="display-3 fw-bold syne-font mb-4">Bring Your <span class="text-creative-pf gradient-text-anim">Boldest Ideas</span> to Life in 3D</h1>
                 <p class="lead text-muted mb-5 pe-lg-5">Upload your design, choose your material, customize the finish, and watch your imagination become a real physical creation.</p>
-                <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-                    <a href="/upload-design.html" class="btn pf-btn-primary" style="background: var(--gradient-creative);">Upload Your Design</a>
-                    <a href="/materials.html" class="btn pf-btn-secondary">Discover Materials</a>
+                <div class="d-flex gap-2 gap-sm-3 justify-content-center justify-content-lg-start">
+                    <a href="/upload-design.html" class="btn pf-btn-primary px-2 px-md-4 text-nowrap" style="background: var(--gradient-creative); font-size: 0.85rem;">Upload Your Design</a>
+                    <a href="/materials.html" class="btn pf-btn-secondary px-2 px-md-4 text-nowrap" style="font-size: 0.85rem;">Discover Materials</a>
                 </div>
             </div>
             <div class="col-lg-6 position-relative hero-visual mt-5 mt-lg-0">
                 <div class="position-relative d-flex justify-content-center">
                     <!-- A creative cluster of images -->
                     <div class="clay-card p-2 float-anim z-3" style="width: 60%; transform: rotate(-5deg);">
-                        <img src="https://images.unsplash.com/photo-1615822363283-9e4501a18206?w=600&h=600&fit=crop" alt="Creative 3D Print" class="img-fluid rounded">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=600&fit=crop" alt="Creative 3D Print" class="img-fluid rounded">
                     </div>
                     <div class="clay-card p-2 float-anim-delayed position-absolute z-2" style="width: 50%; right: 0; bottom: -20px; transform: rotate(10deg);">
-                        <img src="https://images.unsplash.com/photo-1518559384594-5c91b86d6343?w=500&h=500&fit=crop" alt="Colorful Print" class="img-fluid rounded">
+                        <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=500&h=500&fit=crop" alt="Colorful Print" class="img-fluid rounded">
                     </div>
                     <div class="clay-card p-2 float-anim position-absolute z-1" style="width: 40%; left: 0; top: -30px; transform: rotate(-15deg);">
-                        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=400&fit=crop" alt="Artistic Sculpture" class="img-fluid rounded">
+                        <img src="https://images.unsplash.com/photo-1542840410-3092f99611a3?w=400&h=400&fit=crop" alt="Artistic Sculpture" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
@@ -190,7 +165,7 @@
             <!-- Item 2 -->
             <div class="col-md-4">
                 <div class="clay-card p-3 h-100 pf-hover-lift text-center">
-                    <img src="https://images.unsplash.com/photo-1601058268499-e52658b8ebf8?w=500&h=500&fit=crop" class="img-fluid rounded mb-3" style="aspect-ratio: 1/1; object-fit: cover;" alt="Artistic Sculpture">
+                    <img src="https://images.unsplash.com/photo-1542840410-3092f99611a3?w=500&h=500&fit=crop" class="img-fluid rounded mb-3" style="aspect-ratio: 1/1; object-fit: cover;" alt="Artistic Sculpture">
                     <h5 class="syne-font fw-bold mb-1">Artistic Sculptures</h5>
                     <p class="text-muted small">PLA • Matte Finish</p>
                 </div>
@@ -230,10 +205,10 @@
                 </a>
                 <p class="text-muted mb-4 pe-lg-4">Making professional 3D manufacturing accessible to everyone. From digital ideas to physical reality.</p>
                 <div class="d-flex gap-3 social-icons">
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="clay-icon-btn"><i class="bi bi-youtube"></i></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-instagram"></i></a>
+                    <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="clay-icon-btn"><i class="bi bi-youtube"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-6 col-6">
