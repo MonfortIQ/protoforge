@@ -16,9 +16,9 @@ function updateThemeIcon(theme) {
     const themeToggles = document.querySelectorAll('#themeToggle, #themeToggleDash, #desk_themeToggle, #mob_themeToggle');
     themeToggles.forEach(toggle => {
         if (theme === 'dark') {
-            toggle.innerHTML = '<i class="bi bi-moon-fill theme-icon" style="transform: rotate(180deg); transition: 0.4s ease;"></i>';
+            toggle.innerHTML = '<i class="bi bi-moon-stars theme-icon" style="transform: rotate(180deg); transition: 0.4s ease;"></i>';
         } else {
-            toggle.innerHTML = '<i class="bi bi-sun-fill theme-icon" style="transform: rotate(0deg); transition: 0.4s ease;"></i>';
+            toggle.innerHTML = '<i class="bi bi-sun theme-icon" style="transform: rotate(0deg); transition: 0.4s ease;"></i>';
         }
     });
 }

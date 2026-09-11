@@ -506,3 +506,31 @@ html[dir="rtl"] .accordion-button::after {
 /* Fix Hamburger Menu Color */
 .navbar-toggler i { color: var(--text-primary) !important; }
 .navbar-toggler { border: 1px solid var(--border-color) !important; }
+
+
+/* Universal Dark Mode Input & Placeholder Fix */
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+    opacity: 1 !important;
+}
+[data-theme="dark"] .form-control {
+    color: var(--text-primary) !important;
+}
+[data-theme="dark"] .form-control:focus {
+    color: var(--text-primary) !important;
+}
+
+
+/* Fix Dashboard Hamburger Menu Color */
+#openSidebar i {
+    color: var(--text-primary) !important;
+    font-size: 1.5rem;
+}
+
+
+/* Fix disabled/readonly inputs in dark mode */
+[data-theme="dark"] .form-control:disabled, [data-theme="dark"] .form-control[readonly] {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-muted) !important;
+    border-color: var(--border-color) !important;
+}
