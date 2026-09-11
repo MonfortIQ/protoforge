@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 localStorage.setItem('protoforge_current_user', JSON.stringify(user));
-                const dashUrl = user.email === 'admin@protoforge.com' ? '/dashboard/client-dashboard.html' : '/index.html';
+                const dashUrl = '/dashboard/client-dashboard.html';
                 window.location.href = dashUrl;
             } else {
                 alert('Invalid email or password.');
@@ -132,7 +132,7 @@ function updateAuthUI() {
                         dashLi.className = 'nav-item';
                         dashLi.id = 'dynamicDashboardLink';
                         // User previously requested regular users go to index.html and admin to client-dashboard.html
-                        const linkUrl = currentUser.email === 'admin@protoforge.com' ? '/dashboard/client-dashboard.html' : '/index.html';
+                        const linkUrl = '/dashboard/client-dashboard.html';
                         dashLi.innerHTML = `<a class="nav-link fw-bold text-primary-pf" href="${linkUrl}">Dashboard</a>`;
                         navList.appendChild(dashLi);
                     }

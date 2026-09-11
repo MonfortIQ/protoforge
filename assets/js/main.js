@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function initGSAP() {
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
             gsap.registerPlugin(ScrollTrigger);
+            gsap.config({ nullTargetWarn: false });
 
             // Hero Animations
             gsap.fromTo('.hero-content > *', 

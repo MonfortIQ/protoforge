@@ -11,7 +11,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProtoForge Studio | Industrial 3D Printing & Engineering</title>
+    <title>ProtoForge Studio | FAQ</title>
     <meta name="description" content="ProtoForge Studio delivers high-precision 3D printing, rapid prototyping, custom manufacturing, and professional design consultation for businesses and innovators.">
     <meta name="keywords" content="3D Printing, Prototyping, Manufacturing, ProtoForge, Industrial 3D Printing, Creative Prototyping">
     
@@ -65,7 +65,7 @@
         <div class="collapse navbar-collapse" id="pfNavbar">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown pf-dropdown">
-                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Home
                     </a>
                     <ul class="dropdown-menu clay-dropdown border-0 shadow-lg">
@@ -74,7 +74,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="/about.html">About</a>
+                    <a class="nav-link active" href="/about.html">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/services.html">Services</a>
@@ -113,178 +113,103 @@
 
     <!-- Main Content -->
     <main>
-        
-<!-- Hero Section -->
-<section class="hero-industrial">
-    <div class="hero-bg-grid"></div>
-    <div class="container relative z-1">
-        <div class="row align-items-center min-vh-75">
-            <div class="col-lg-6 hero-content">
-                <span class="badge bg-primary bg-opacity-10 text-primary-pf px-3 py-2 rounded-pill mb-4 border border-primary border-opacity-25">ProtoForge Industrial</span>
-                <h1 class="display-3 fw-bold syne-font mb-4">Transforming Digital Designs Into <span class="text-primary-pf gradient-text-anim">Precision Reality</span></h1>
-                <p class="lead text-muted mb-5 pe-lg-5">ProtoForge Industrial delivers high-precision 3D printing, rapid prototyping, custom manufacturing, and professional design consultation for businesses and innovators.</p>
-                <div class="d-flex gap-2 gap-sm-3">
-                    <a href="/upload-design.html" class="btn pf-btn-primary px-2 px-md-4 text-nowrap" style="font-size: 0.9rem;">Start Your Print</a>
-                    <a href="/services.html" class="btn pf-btn-secondary px-2 px-md-4 text-nowrap" style="font-size: 0.9rem;">Explore Services</a>
-                </div>
+        <!-- Hero Section -->
+        <section class="hero-industrial" style="min-height: 50vh; padding-top: 150px; padding-bottom: 50px;">
+            <div class="container text-center relative z-1">
+                <span class="badge bg-primary bg-opacity-10 text-primary-pf px-3 py-2 rounded-pill mb-4 border border-primary border-opacity-25">Support & Answers</span>
+                <h1 class="display-3 fw-bold syne-font mb-4">Frequently Asked <span class="text-primary-pf">Questions</span></h1>
+                <p class="lead text-muted mx-auto" style="max-width: 600px;">Find answers to common questions about our materials, printing process, shipping, and pricing.</p>
             </div>
-            <div class="col-lg-6 position-relative hero-visual mt-5 mt-lg-0">
-                <div class="position-relative">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=800&fit=crop" alt="Industrial 3D Printer" class="img-fluid rounded-4 shadow-lg">
-                    
-                    <!-- Floating Cards -->
-                    <div class="clay-card position-absolute top-0 start-0 translate-middle-y ms-n4 p-3 float-anim bg-white bg-opacity-75">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="text-primary-pf fs-2"><i class="bi bi-bullseye"></i></div>
-                            <div>
-                                <h6 class="mb-0 fw-bold">Print Accuracy</h6>
-                                <small class="text-muted">±0.05mm Precision</small>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-5 mb-6">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="accordion clay-card p-4 p-md-5" id="faqAccordion" style="overflow: visible;">
+                            
+                            <!-- FAQ Item 1 -->
+                            <div class="accordion-item bg-transparent border-0 mb-4 border-bottom pb-3">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button bg-transparent shadow-none syne-font fw-bold fs-5 text-dark px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        What file formats do you accept for 3D printing?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 text-muted">
+                                        We currently accept .STL, .OBJ, and .STEP files. For the best results and quickest turnaround time, we highly recommend exporting your models in .STL format with a high resolution mesh.
+                                    </div>
+                                </div>
                             </div>
+
+                            <!-- FAQ Item 2 -->
+                            <div class="accordion-item bg-transparent border-0 mb-4 border-bottom pb-3">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent shadow-none syne-font fw-bold fs-5 text-dark px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        How long does a typical order take?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 text-muted">
+                                        Standard production time is typically 3-5 business days depending on the size and complexity of the print. We also offer expedited 24-hour and 48-hour priority printing for an additional fee.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3 -->
+                            <div class="accordion-item bg-transparent border-0 mb-4 border-bottom pb-3">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent shadow-none syne-font fw-bold fs-5 text-dark px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        What materials are best for outdoor use?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 text-muted">
+                                        For outdoor applications where UV resistance and temperature stability are required, we strongly recommend ASA or PETG. Standard PLA will warp in direct sunlight and degrade over time outdoors.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4 -->
+                            <div class="accordion-item bg-transparent border-0 mb-4 border-bottom pb-3">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent shadow-none syne-font fw-bold fs-5 text-dark px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        Do you offer bulk discounts for mass production?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 text-muted">
+                                        Yes! We offer tiered pricing for batch orders. Discounts typically begin at quantities of 10+ for the same part, scaling up to mass-manufacturing pricing for 1,000+ units. Please contact our sales team for a custom quote.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 5 -->
+                            <div class="accordion-item bg-transparent border-0 mb-2">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed bg-transparent shadow-none syne-font fw-bold fs-5 text-dark px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                        Can I cancel or modify my order after submitting?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 text-muted">
+                                        Orders can be cancelled or modified within 2 hours of placement. Once an order enters the 'In Production' stage and the machines are running, we cannot cancel or refund the order due to the custom nature of the service.
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-
-                    <div class="clay-card position-absolute bottom-0 end-0 ms-n4 p-3 float-anim-delayed bg-white bg-opacity-75">
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="text-success fs-2"><i class="bi bi-shield-check"></i></div>
-                            <div>
-                                <h6 class="mb-0 fw-bold">Quality Checked</h6>
-                                <small class="text-muted">100% Guaranteed</small>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Trusted By Section -->
-<section class="py-5 border-top border-bottom border-secondary-subtle fade-up">
-    <div class="container text-center">
-        <p class="text-muted mb-4 fw-bold text-uppercase tracking-wide">Trusted by Innovative Engineering Teams</p>
-        <div class="row justify-content-center align-items-center opacity-50 g-4">
-            <div class="col-12 col-sm-6 col-md-2"><h4 class="syne-font fw-bold mb-0">AERO<span class="text-primary-pf">CORP</span></h4></div>
-            <div class="col-12 col-sm-6 col-md-2"><h4 class="syne-font fw-bold mb-0">Tech<span class="text-primary-pf">Mach</span></h4></div>
-            <div class="col-12 col-sm-6 col-md-2"><h4 class="syne-font fw-bold mb-0">NEXUS</h4></div>
-            <div class="col-12 col-sm-6 col-md-2"><h4 class="syne-font fw-bold mb-0">ROBO<span class="text-primary-pf">DYNE</span></h4></div>
-            <div class="col-12 col-sm-6 col-md-2"><h4 class="syne-font fw-bold mb-0">Omni<span class="text-primary-pf">Build</span></h4></div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Preview -->
-<section class="py-6 my-5 stagger-cards">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold syne-font">Industrial Capabilities</h2>
-            <p class="lead text-muted">Advanced manufacturing solutions for complex engineering challenges.</p>
-        </div>
-        <div class="row g-4">
-            <!-- Rapid Prototyping -->
-            <div class="col-lg-4 col-md-6">
-                <div class="clay-card p-0 h-100 pf-hover-lift d-flex flex-column">
-                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" class="img-fluid border-bottom" style="object-fit: cover; aspect-ratio: 3/2;" alt="Rapid Prototyping">
-                    <div class="p-4 d-flex flex-column flex-grow-1">
-                        <h4 class="syne-font fw-bold mb-3">Rapid Prototyping</h4>
-                        <p class="text-muted">Accelerate your product development cycle with high-speed, accurate prototyping.</p>
-                        <ul class="list-unstyled text-muted small mb-4">
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> Same-day dispatch available</li>
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> Design validation</li>
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> Multiple iteration support</li>
-                        </ul>
-                        <a href="/service-details.html" class="btn pf-btn-secondary w-100 mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Functional Prototypes -->
-            <div class="col-lg-4 col-md-6">
-                <div class="clay-card p-0 h-100 pf-hover-lift d-flex flex-column">
-                    <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?w=600&h=400&fit=crop" class="img-fluid border-bottom" style="object-fit: cover; aspect-ratio: 3/2;" alt="Functional Prototypes">
-                    <div class="p-4 d-flex flex-column flex-grow-1">
-                        <h4 class="syne-font fw-bold mb-3">Functional Prototypes</h4>
-                        <p class="text-muted">Test fit, form, and function with production-grade engineering materials.</p>
-                        <ul class="list-unstyled text-muted small mb-4">
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> High-strength materials</li>
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> Mechanical testing</li>
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> Assembly verification</li>
-                        </ul>
-                        <a href="/service-details.html" class="btn pf-btn-secondary w-100 mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Custom Mechanical Parts -->
-            <div class="col-lg-4 col-md-6">
-                <div class="clay-card p-0 h-100 pf-hover-lift d-flex flex-column">
-                    <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=600&h=400&fit=crop" class="img-fluid border-bottom" style="object-fit: cover; aspect-ratio: 3/2;" alt="Custom Mechanical Parts">
-                    <div class="p-4 d-flex flex-column flex-grow-1">
-                        <h4 class="syne-font fw-bold mb-3">Custom Mechanical Parts</h4>
-                        <p class="text-muted">Low-volume production of end-use parts with complex geometries.</p>
-                        <ul class="list-unstyled text-muted small mb-4">
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> No tooling costs</li>
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> Complex internal structures</li>
-                            <li><i class="bi bi-check2 text-primary-pf me-2"></i> On-demand manufacturing</li>
-                        </ul>
-                        <a href="/service-details.html" class="btn pf-btn-secondary w-100 mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <a href="/services.html" class="btn pf-btn-primary">View All 9 Industrial Services</a>
-        </div>
-    </div>
-</section>
-
-<!-- How It Works -->
-<section class="py-6 bg-light fade-up">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-5 mb-5 mb-lg-0">
-                <h2 class="display-5 fw-bold syne-font mb-4">From CAD to Reality in 4 Steps</h2>
-                <p class="lead text-muted mb-4">Our automated industrial pipeline ensures precision at every stage of the manufacturing process.</p>
                 
-                <div class="d-flex mb-4">
-                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 48px; height: 48px;">1</div>
-                    <div>
-                        <h5 class="fw-bold">Upload Your Design</h5>
-                        <p class="text-muted">Securely upload STL, STEP, or OBJ files for instant automated printability analysis.</p>
-                    </div>
-                </div>
-                <div class="d-flex mb-4">
-                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 48px; height: 48px;">2</div>
-                    <div>
-                        <h5 class="fw-bold">Configure Materials</h5>
-                        <p class="text-muted">Select from engineering-grade polymers, composites, and metal materials.</p>
-                    </div>
-                </div>
-                <div class="d-flex mb-4">
-                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 48px; height: 48px;">3</div>
-                    <div>
-                        <h5 class="fw-bold">Production</h5>
-                        <p class="text-muted">Our advanced printing farm manufactures your parts with ±0.05mm precision.</p>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 48px; height: 48px;">4</div>
-                    <div>
-                        <h5 class="fw-bold">Quality Control & Delivery</h5>
-                        <p class="text-muted">Every part passes strict QA inspection before express delivery worldwide.</p>
-                    </div>
+                <div class="text-center mt-5">
+                    <p class="text-muted mb-3">Still have questions?</p>
+                    <a href="/contact.html" class="btn pf-btn-secondary px-4">Contact Support</a>
                 </div>
             </div>
-            <div class="col-lg-6 offset-lg-1">
-                <div class="clay-card p-3">
-                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop" alt="Engineering Process" class="img-fluid rounded">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    </main>
+        </section>
+</main>
 
     <!-- Footer -->
     <footer class="pf-footer pt-5 pb-4 mt-5 clay-footer">

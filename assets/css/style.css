@@ -386,6 +386,15 @@ html[dir="rtl"] .direction-icon {
     transform: scaleX(-1);
 }
 
+/* Accordion Fixes */
+[data-theme="dark"] .accordion-button::after {
+    filter: invert(1) brightness(2);
+}
+html[dir="rtl"] .accordion-button::after {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
 .img-cover {
     object-fit: cover;
     width: 100%;
