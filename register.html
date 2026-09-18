@@ -82,22 +82,25 @@
                                 <p class="text-muted">Join ProtoForge to manage your prints, orders, and materials.</p>
                             </div>
                             
-                            <form id="registerForm">
+                            <form id="registerForm" class="needs-validation" novalidate>
                                 <div class="mb-4">
                                     <label class="form-label fw-bold small text-muted">Full Name</label>
-                                    <input type="text" class="form-control pf-input" id="name" placeholder="John Doe" required>
+                                    <input type="text" class="form-control pf-input" id="name" placeholder="John Doe" required minlength="3">
+                                    <div class="invalid-feedback">Please enter your full name (at least 3 characters).</div>
                                 </div>
 
                                 <div class="mb-4">
                                     <label class="form-label fw-bold small text-muted">Email Address</label>
-                                    <input type="email" class="form-control pf-input" id="email" placeholder="name@company.com" required>
+                                    <input type="email" class="form-control pf-input" id="email" placeholder="name@company.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
                                 </div>
                                 
                                 <div class="row mb-4">
                                     <div class="col-md-6 mb-4 mb-md-0 position-relative">
                                         <label class="form-label fw-bold small text-muted">Password</label>
-                                        <div class="input-group">
-                                            <input type="password" id="password" class="form-control pf-input border-end-0" required placeholder="••••••••">
+                                        <div class="input-group has-validation">
+                                            <input type="password" id="password" class="form-control pf-input border-end-0" required minlength="8" placeholder="••••••••">
+                                            <div class="invalid-feedback mt-2" >Password must be at least 8 characters.</div>
                                             <span class="input-group-text bg-transparent border-0 pe-3 pf-input position-absolute end-0 top-0 bottom-0 z-3 cursor-pointer" onclick="togglePassword('password', this)" style="cursor: pointer;">
                                                 <i class="bi bi-eye text-muted"></i>
                                             </span>
@@ -105,8 +108,9 @@
                                     </div>
                                     <div class="col-md-6 position-relative">
                                         <label class="form-label fw-bold small text-muted">Confirm Password</label>
-                                        <div class="input-group">
+                                        <div class="input-group has-validation">
                                             <input type="password" id="confirmPassword" class="form-control pf-input border-end-0" required placeholder="••••••••">
+                                            <div class="invalid-feedback mt-2" id="confirmPassFeedback" >Passwords do not match.</div>
                                             <span class="input-group-text bg-transparent border-0 pe-3 pf-input position-absolute end-0 top-0 bottom-0 z-3 cursor-pointer" onclick="togglePassword('confirmPassword', this)" style="cursor: pointer;">
                                                 <i class="bi bi-eye text-muted"></i>
                                             </span>
@@ -116,6 +120,7 @@
                                 
                                 <div class="mb-4 form-check">
                                     <input type="checkbox" class="form-check-input" id="terms" required>
+                                    <div class="invalid-feedback">You must agree before submitting.</div>
                                     <label class="form-check-label small text-muted" for="terms">I agree to the <a href="#" class="text-primary-pf text-decoration-none">Terms & Conditions</a> and <a href="#" class="text-primary-pf text-decoration-none">Privacy Policy</a>.</label>
                                 </div>
                                 <button type="submit" class="btn pf-btn-primary w-100 mb-4 rounded-pill py-2">Create Account</button>

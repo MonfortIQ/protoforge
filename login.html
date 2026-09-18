@@ -82,10 +82,11 @@
                                 <p class="text-muted">Sign in to your ProtoForge account to track your prints.</p>
                             </div>
                             
-                            <form id="loginForm">
+                            <form id="loginForm" class="needs-validation" novalidate>
                                 <div class="mb-4">
                                     <label class="form-label fw-bold small text-muted">Email Address</label>
-                                    <input type="email" class="form-control pf-input" id="email" placeholder="name@company.com" required>
+                                    <input type="email" class="form-control pf-input" id="email" placeholder="name@company.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
                                 </div>
                                 
                                 <div class="mb-4">
@@ -93,8 +94,9 @@
                                         <label class="form-label fw-bold small text-muted mb-0">Password</label>
                                         <a href="#" class="small text-primary-pf fw-bold text-decoration-none">Forgot Password?</a>
                                     </div>
-                                    <div class="input-group position-relative">
+                                    <div class="input-group has-validation position-relative">
                                         <input type="password" class="form-control pf-input border-end-0" id="password" placeholder="••••••••" required>
+                                        <div class="invalid-feedback mt-2" >Please enter your password.</div>
                                         <span class="input-group-text bg-transparent border-0 pe-3 pf-input position-absolute end-0 top-0 bottom-0 z-3 cursor-pointer" onclick="togglePassword('password', this)" style="cursor: pointer;">
                                             <i class="bi bi-eye text-muted"></i>
                                         </span>

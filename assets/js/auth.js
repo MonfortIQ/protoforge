@@ -6,24 +6,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
         registerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                alert('Passwords do not match!');
-                return;
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            
+            // Custom match validation
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity("Passwords do not match");
+            } else {
+                confirmPassword.setCustomValidity("");
             }
 
+            if (!registerForm.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+                registerForm.classList.add('was-validated');
+                return;
+            }
+            e.preventDefault(); // Valid form, prevent native submit to handle auth locally
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
             const users = JSON.parse(localStorage.getItem('protoforge_users')) || [];
             if (users.find(u => u.email === email)) {
+                const emailInput = document.getElementById('email');
+                emailInput.setCustomValidity("Email already registered!");
+                registerForm.classList.add('was-validated');
+                
+                // Reset custom validity immediately so they can re-type
+                emailInput.addEventListener('input', function() {
+                    emailInput.setCustomValidity("");
+                }, {once: true});
+                
                 alert('Email already registered!');
                 return;
             }
 
-            const newUser = { name, email, password, id: Date.now(), role: 'client' };
+            const newUser = { name, email, password: password.value, id: Date.now(), role: 'client' };
             users.push(newUser);
             localStorage.setItem('protoforge_users', JSON.stringify(users));
             
@@ -35,7 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
+            if (!loginForm.checkValidity()) {
+                e.preventDefault();
+                e.stopPropagation();
+                loginForm.classList.add('was-validated');
+                return;
+            }
             e.preventDefault();
+
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
@@ -43,17 +69,20 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = users.find(u => u.email === email && u.password === password);
 
             if (user) {
-                // Bulletproof override for legacy accounts without roles
-                if (user.email === 'admin@protoforge.com') {
-                    user.role = 'admin';
-                } else if (!user.role) {
-                    user.role = 'client';
-                }
+                if (user.email === 'admin@protoforge.com') user.role = 'admin';
+                else if (!user.role) user.role = 'client';
                 
                 localStorage.setItem('protoforge_current_user', JSON.stringify(user));
-                const dashUrl = '/dashboard/client-dashboard.html';
-                window.location.href = dashUrl;
+                window.location.href = '/dashboard/client-dashboard.html';
             } else {
+                const passInput = document.getElementById('password');
+                passInput.setCustomValidity("Invalid email or password");
+                loginForm.classList.add('was-validated');
+                
+                passInput.addEventListener('input', function() {
+                    passInput.setCustomValidity("");
+                }, {once: true});
+                
                 alert('Invalid email or password.');
             }
         });
@@ -126,18 +155,14 @@ function updateAuthUI() {
             const navList = pfNavbar.querySelector('.navbar-nav');
             if (navList) {
                 let existingDash = navList.querySelector('#dynamicDashboardLink');
-                if (currentUser) {
-                    if (!existingDash) {
-                        const dashLi = document.createElement('li');
-                        dashLi.className = 'nav-item';
-                        dashLi.id = 'dynamicDashboardLink';
-                        // User previously requested regular users go to index.html and admin to client-dashboard.html
-                        const linkUrl = '/dashboard/client-dashboard.html';
-                        dashLi.innerHTML = `<a class="nav-link fw-bold text-primary-pf" href="${linkUrl}">Dashboard</a>`;
-                        navList.appendChild(dashLi);
-                    }
-                } else {
-                    if (existingDash) existingDash.remove();
+                // Always show the Dashboard link, even if logged out (it redirects to login automatically)
+                if (!existingDash) {
+                    const dashLi = document.createElement('li');
+                    dashLi.className = 'nav-item';
+                    dashLi.id = 'dynamicDashboardLink';
+                    const linkUrl = '/dashboard/client-dashboard.html';
+                    dashLi.innerHTML = `<a class="nav-link fw-bold text-primary-pf" href="${linkUrl}">Dashboard</a>`;
+                    navList.appendChild(dashLi);
                 }
             }
         }
